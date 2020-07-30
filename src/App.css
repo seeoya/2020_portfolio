@@ -1,0 +1,39 @@
+/* slick slider CSS*/
+.main__slider {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.slick-slide img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 2rem;
+}
+
+.slick-prev {
+  left: -35px;
+}
+
+.slick-next {
+  right: -25px;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  color: #333;
+  font-size: inherit;
+}
+
+/* Portfolio*/
+.portfolio__sectionSumbnail {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}

@@ -1,11 +1,18 @@
 import React, { Component } from "react";
+import $ from "jquery";
 import "./App.css";
-import Portfolio from "./Portfolio";
+import Main from "./Main";
 import Profile from "./Profile";
+import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 
 class App extends Component {
-  state = {};
+  state = { selectPage: 0 };
+
+  componentDidMount() {
+    //jquery 위치
+    //근데 왜 react로 바꾸고 나면 안 되나? 마운트 검색해서 찾아보기
+  }
 
   changePage = (num) => {
     this.setState({
@@ -14,24 +21,63 @@ class App extends Component {
     return;
   };
 
+  navList = [
+    {
+      id: 0,
+      title: "MAIN"
+    },
+    {
+      id: 1,
+      title: "PROFILE"
+    },
+    {
+      id: 2,
+      title: "PORTFOLIO"
+    },
+    {
+      id: 3,
+      title: "CONTACT"
+    }
+  ];
+
+  pageSwitch = (num) => {
+    switch (num) {
+      case 1:
+        return <Profile />;
+      case 2:
+        return <Portfolio />;
+      case 3:
+        return <Contact />;
+      default:
+        return <Main />;
+    }
+  };
+
   render() {
     return (
-      <div className="header">
-        <input type="button" onClick={() => this.changePage(1)} value="asd" />
-        <input type="button" onClick={() => this.changePage(2)} value="asd" />
-        <input type="button" onClick={() => this.changePage(3)} value="asd" />
-        <input type="button" onClick={() => this.changePage(4)} value="asd" />
-
-        <Portfolio selectPage={this.state.selectPage} />
-        <Profile />
-        <Contact />
-      </div>
+      <>
+        <header className="header">
+          <div className="header__logo">로고</div>
+          <nav>
+            {this.navList.map((index) => (
+              <span key={index.id}>
+                <a className="nav__button" onClick={() => this.changePage(index.id)}>
+                  {index.title}
+                </a>
+              </span>
+            ))}
+          </nav>
+        </header>
+        <section>
+          <article className="page">{this.pageSwitch(this.state.selectPage)}</article>
+        </section>
+        <footer>
+          <address></address>
+          <p>ⓒSeeoya 2020, ALL RIGHTS RESERVED</p>
+        </footer>
+      </>
     );
   }
 }
-
-App.defaultProps = {
-  selectPage: 3
-};
 
 export default App;
