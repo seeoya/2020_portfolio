@@ -57,7 +57,7 @@ class App extends Component {
     return (
       <>
         <header className="header">
-          <div className="header__logo">로고</div>
+          <div className="header__logo">SEEOYA</div>
           <nav>
             {this.navList.map((index) => (
               <span key={index.id}>
@@ -73,7 +73,7 @@ class App extends Component {
         </section>
         <footer>
           <address></address>
-          <p>ⓒSeeoya 2020, ALL RIGHTS RESERVED</p>
+          <p>ⓒSEEOYA 2020, ALL RIGHTS RESERVED</p>
         </footer>
       </>
     );

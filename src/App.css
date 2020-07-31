@@ -1,6 +1,29 @@
+.header {
+  position: fixed;
+  display: contents;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 1;
+  background-color: pink;
+}
+
+.nav__button {
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  color: white;
+}
+
+.page {
+  width: 90%;
+  text-align: center;
+  margin: 50px auto 100px auto;
+  background-color: cyan;
+}
+
 /* slick slider CSS*/
 .main__slider {
-  width: 90%;
+  width: 100%;
   height: auto;
   margin: 0 auto;
 }
@@ -15,25 +38,43 @@
 .slick-prev,
 .slick-next {
   font-size: 2rem;
+  z-index: 1;
 }
 
 .slick-prev {
-  left: -35px;
+  left: 10px;
 }
 
 .slick-next {
-  right: -25px;
+  right: 25px;
 }
 
 .slick-next:before,
 .slick-prev:before {
-  color: #333;
+  color: #fff;
   font-size: inherit;
 }
 
 /* Portfolio*/
 .portfolio__sectionSumbnail {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
+}
+
+.portfolio__sectionList {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.portfolio__section {
+  display: inline-block;
+  margin: 1%;
+  padding: 20px;
+  max-width: 200px;
+  height: fit-content;
+  box-shadow: 0px 1px 1px #bbb;
+  background-color: pink;
 }
