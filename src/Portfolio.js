@@ -33,10 +33,6 @@ function Portfolio({ selectPage }) {
 
   return (
     <div class="portfolio">
-<<<<<<< HEAD
-=======
-      <h1 className="portfolio__title">PORTFOLIO {selectPage}</h1>
->>>>>>> dcf36dce2a74207a1c986c873699b0891cf8296b
       <div className="portfolio__sectionList">
         {sectionList.map((i) => (
           <PortfolioSection key={i.id} img={i.img} title={i.title} date={i.date} desc={i.desc} link={i.link} />
