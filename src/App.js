@@ -60,10 +60,15 @@ class App extends Component {
     return (
       <>
         <header className="header">
+<<<<<<< HEAD
           <div className="header__logo" onClick={() => this.changePage(0)}>
             Seeoya
           </div>
           <nav className="nav">
+=======
+          <div className="header__logo">SEEOYA</div>
+          <nav>
+>>>>>>> dcf36dce2a74207a1c986c873699b0891cf8296b
             {this.navList.map((index) => (
               <span key={index.id}>
                 <a className="nav__button" onClick={() => this.changePage(index.id)}>

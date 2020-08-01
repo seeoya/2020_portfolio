@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* 폰트
 font-family: 'Meddon', cursive;
 font-family: 'Montserrat', sans-serif;
@@ -29,10 +30,20 @@ font-family: 'Special Elite', cursive;*/
 .nav {
   z-index: 1;
   margin: 20px auto;
+=======
+.header {
+  position: fixed;
+  display: contents;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 1;
+  background-color: pink;
+>>>>>>> dcf36dce2a74207a1c986c873699b0891cf8296b
 }
 
 .nav__button {
   text-align: center;
+<<<<<<< HEAD
   padding: 3px 5%;
   background: #333;
   color: white;
@@ -48,17 +59,27 @@ font-family: 'Special Elite', cursive;*/
 .nav__button:active,
 .nav__button--active {
   background-color: lightcoral;
+=======
+  padding: 10px;
+  background: #333;
+  color: white;
+>>>>>>> dcf36dce2a74207a1c986c873699b0891cf8296b
 }
 
 .page {
   width: 90%;
   text-align: center;
+<<<<<<< HEAD
   margin: 40px auto 100px auto;
 }
 
 .subTitle {
   font-family: "Special Elite", cursive;
   font-size: 2rem;
+=======
+  margin: 50px auto 100px auto;
+  background-color: cyan;
+>>>>>>> dcf36dce2a74207a1c986c873699b0891cf8296b
 }
 
 /* slick slider CSS*/
@@ -98,7 +119,11 @@ font-family: 'Special Elite', cursive;*/
 /* Portfolio*/
 .portfolio__sectionSumbnail {
   width: 200px;
+<<<<<<< HEAD
   height: 250px;
+=======
+  height: 200px;
+>>>>>>> dcf36dce2a74207a1c986c873699b0891cf8296b
   object-fit: cover;
 }
 
@@ -111,6 +136,7 @@ font-family: 'Special Elite', cursive;*/
 
 .portfolio__section {
   display: inline-block;
+<<<<<<< HEAD
   max-width: 200px;
   height: fit-content;
   margin: 1%;
@@ -140,4 +166,12 @@ font-family: 'Special Elite', cursive;*/
 
 .footer {
   font-size: 0.8rem;
+=======
+  margin: 1%;
+  padding: 20px;
+  max-width: 200px;
+  height: fit-content;
+  box-shadow: 0px 1px 1px #bbb;
+  background-color: pink;
+>>>>>>> dcf36dce2a74207a1c986c873699b0891cf8296b
 }

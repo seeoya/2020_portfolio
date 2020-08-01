@@ -17,6 +17,11 @@ function Main({ selectPage }) {
 
   return (
     <div className="main">
+<<<<<<< HEAD
+=======
+      <h1 className="main__title">MAIN</h1>
+
+>>>>>>> dcf36dce2a74207a1c986c873699b0891cf8296b
       <Slider {...settings}>
         <div>
           <img src="/img/cinque.jpg" alt="sliderImage1"></img>

@@ -138,6 +138,11 @@ function Profile({ selectPage }) {
 
   return (
     <div className="profile">
+<<<<<<< HEAD
+=======
+      <h1 className="profile__title">PROFILE</h1>
+
+>>>>>>> dcf36dce2a74207a1c986c873699b0891cf8296b
       <div className="profile__name">
         김수영<span>Hailey KIM</span>
       </div>
