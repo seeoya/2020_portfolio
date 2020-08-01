@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import $ from "jquery";
-//import "./main.css";
 
 function Main({ selectPage }) {
   const settings = {
@@ -12,19 +11,12 @@ function Main({ selectPage }) {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    //centerMode: true,
-    //centerPadding: "0px",
     swipe: true,
     draggable: true
-
-    //fade: true,
-    //pauseOnHover: true,
   };
 
   return (
-    <>
-      <div className="main">메인 {selectPage}</div>
-
+    <div className="main">
       <Slider {...settings}>
         <div>
           <img src="/img/cinque.jpg" alt="sliderImage1"></img>
@@ -36,7 +28,7 @@ function Main({ selectPage }) {
           <img src="/img/lobby.jpg" alt="sliderImage3"></img>
         </div>
       </Slider>
-    </>
+    </div>
   );
 }
 

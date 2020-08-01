@@ -1,6 +1,69 @@
+/* 폰트
+font-family: 'Meddon', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Mulish', sans-serif;
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Recursive', sans-serif;
+font-family: 'Special Elite', cursive;*/
+
+#root {
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.header {
+  display: contents;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.header__logo {
+  font-family: "Meddon", cursive;
+  font-size: 3rem;
+  color: #333;
+}
+
+.header__logo:hover {
+  color: lightcoral;
+}
+
+.nav {
+  z-index: 1;
+  margin: 20px auto;
+}
+
+.nav__button {
+  text-align: center;
+  padding: 3px 5%;
+  background: #333;
+  color: white;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.nav__button:hover {
+  background-color: rgba(240, 128, 128, 0.5);
+}
+
+.nav__button:active,
+.nav__button--active {
+  background-color: lightcoral;
+}
+
+.page {
+  width: 90%;
+  text-align: center;
+  margin: 40px auto 100px auto;
+}
+
+.subTitle {
+  font-family: "Special Elite", cursive;
+  font-size: 2rem;
+}
+
 /* slick slider CSS*/
 .main__slider {
-  width: 90%;
+  width: 100%;
   height: auto;
   margin: 0 auto;
 }
@@ -15,25 +78,66 @@
 .slick-prev,
 .slick-next {
   font-size: 2rem;
+  z-index: 1;
 }
 
 .slick-prev {
-  left: -35px;
+  left: 10px;
 }
 
 .slick-next {
-  right: -25px;
+  right: 25px;
 }
 
 .slick-next:before,
 .slick-prev:before {
-  color: #333;
+  color: #fff;
   font-size: inherit;
 }
 
 /* Portfolio*/
 .portfolio__sectionSumbnail {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 250px;
   object-fit: cover;
+}
+
+.portfolio__sectionList {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.portfolio__section {
+  display: inline-block;
+  max-width: 200px;
+  height: fit-content;
+  margin: 1%;
+  padding: 30px;
+  border: 1px outset #eee;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px rgba(200, 200, 200, 0.7);
+  line-height: 2rem;
+}
+
+.portfolio__section:hover {
+  background-color: #eee;
+}
+
+.portfolio__sectionTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.portfolio__sectionDate {
+  font-size: 0.9rem;
+}
+
+.portfolio__sectionDescription {
+  line-height: 1.4rem;
+}
+
+.footer {
+  font-size: 0.8rem;
 }

@@ -10,8 +10,11 @@ class App extends Component {
   state = { selectPage: 0 };
 
   componentDidMount() {
-    //jquery 위치
-    //근데 왜 react로 바꾸고 나면 안 되나? 마운트 검색해서 찾아보기
+    $(".nav__button").eq(this.state.selectPage).addClass("nav__button--active");
+  }
+  componentDidUpdate() {
+    $(".nav__button").removeClass("nav__button--active");
+    $(".nav__button").eq(this.state.selectPage).addClass("nav__button--active");
   }
 
   changePage = (num) => {
@@ -57,8 +60,10 @@ class App extends Component {
     return (
       <>
         <header className="header">
-          <div className="header__logo">로고</div>
-          <nav>
+          <div className="header__logo" onClick={() => this.changePage(0)}>
+            Seeoya
+          </div>
+          <nav className="nav">
             {this.navList.map((index) => (
               <span key={index.id}>
                 <a className="nav__button" onClick={() => this.changePage(index.id)}>
@@ -71,9 +76,9 @@ class App extends Component {
         <section>
           <article className="page">{this.pageSwitch(this.state.selectPage)}</article>
         </section>
-        <footer>
+        <footer className="footer">
           <address></address>
-          <p>ⓒSeeoya 2020, ALL RIGHTS RESERVED</p>
+          <p>ⓒSEEOYA 2020, ALL RIGHTS RESERVED</p>
         </footer>
       </>
     );
