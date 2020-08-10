@@ -1,11 +1,3 @@
-/* 폰트
-font-family: 'Meddon', cursive;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Mulish', sans-serif;
-font-family: 'Nanum Gothic', sans-serif;
-font-family: 'Recursive', sans-serif;
-font-family: 'Special Elite', cursive;*/
-
 #root {
   font-family: "Nanum Gothic", sans-serif;
 }
@@ -51,9 +43,11 @@ font-family: 'Special Elite', cursive;*/
 }
 
 .page {
-  width: 90%;
+  width: 85%;
   text-align: center;
   margin: 40px auto 100px auto;
+  font-size: 0.9rem;
+  max-width: 1200px;
 }
 
 .subTitle {
@@ -95,11 +89,99 @@ font-family: 'Special Elite', cursive;*/
   font-size: inherit;
 }
 
+/* Profile */
+
+.profile__name {
+  font-size: 3rem;
+  text-align: center;
+  vertical-align: middle;
+  font-family: "Stylish", cursive;
+}
+
+.profile__name--eng {
+  font-size: 1rem;
+  font-family: "Cinzel", serif;
+}
+
+.profile h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  width: 30%;
+  border-radius: 5px;
+  padding: 3px 0;
+  background-color: lightcoral;
+  color: white;
+  margin: 50px auto 20px;
+  font-family: "Mulish", sans-serif;
+}
+
+.profile__skills--content {
+  display: inline-flex;
+  width: 100%;
+  max-width: 900px;
+}
+.profile__skills--content1,
+.profile__skills--content2,
+.profile__skills--content3,
+.profile__skills--content4 {
+  width: 100%;
+}
+
+.profile__skills--icon {
+  vertical-align: middle;
+  margin: 5px;
+  padding: 10px 0;
+}
+
+.profile__skills--icon p {
+  vertical-align: middle;
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+.profile__skills--icon img {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+.profile__skills--icon:hover {
+  background-color: rgba(240, 128, 128, 0.1);
+}
+
+.profile__educations table,
+.profile__certifications table {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.profile__educations tr td,
+.profile__certifications tr td {
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+}
+
+.profile__educations tr:hover,
+.profile__certifications tr:hover {
+  background-color: rgba(240, 128, 128, 0.1);
+}
+
+/* .profile__educations tr:nth-child(2n) td:nth-child(2n),
+.profile__certifications tr:nth-child(2n) td:nth-child(2n) {
+  background-color: rgba(240, 240, 240, 0.7);
+} */
+
+.profile__educations tr:first-child td,
+.profile__certifications tr:first-child td {
+  border-top: 1px solid #eee;
+}
+
 /* Portfolio*/
+
 .portfolio__slider {
   width: 100%;
   max-width: 500px;
   object-fit: cover;
+  margin: 0;
 }
 
 .portfolio__slider .slick-slide img {
@@ -114,24 +196,18 @@ font-family: 'Special Elite', cursive;*/
   color: #777;
 }
 
-.portfolio__sectionSumbnail {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-}
-
 .portfolio__sectionList {
+  width: 100%;
   display: inline-flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 20px;
 }
 
 .portfolio__section {
   display: inline-block;
-  width: 20%;
-  min-width: 300px;
-  max-width: 30%;
+  width: 25%;
+  min-width: 250px;
   height: fit-content;
   margin: 1%;
   padding: 30px;
@@ -143,6 +219,16 @@ font-family: 'Special Elite', cursive;*/
 
 .portfolio__section:hover {
   background-color: #eee;
+}
+
+.portfolio__sectionSumbnail {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+.portfolio__sectionTitle {
+  margin: 10px 0;
 }
 
 .portfolio__sectionTitle {
@@ -184,4 +270,5 @@ font-family: 'Special Elite', cursive;*/
 /* footer */
 .footer {
   font-size: 0.8rem;
+  text-align: center;
 }

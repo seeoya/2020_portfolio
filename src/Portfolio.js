@@ -4,56 +4,52 @@ import Slider from "react-slick";
 
 const settings = {
   className: "portfolio__slider",
+  fade: true,
   dots: false,
   infinite: true,
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: true,
-  swipe: true,
-  draggable: true
+  autoplay: true
 };
 
 function Portfolio({ selectPage }) {
   const sectionList = [
     {
       id: 1,
-      img: ["./img/hungarian.jpg", "./img/lobby.jpg", "./img/cinque.jpg"],
+      img: ["./img/p5-main.png"],
       title: "홈 쉐어링 서비스 Project P5",
       date: "2020. 02. 24 ~ 2020. 03. 20",
-      set: ["5인, 기획·퍼블리싱·프론트 엔드 담당", "HTML, CSS, Javascript, Jquery", "(+Java, JSP, Ajax)"],
+      set: ["5인, 기획·퍼블리싱·프론트 엔드 담당", "HTML, CSS, Javascript, Jquery", "(+Java, JSP, Ajax, Spring Framework, AWS)"],
       desc: [
-        "Home sharing 서비스에서 Host는 부수입을 창출할 수 있으며, 새로운 사람들을 만나고, 그들이 문화를 경험하는 순간을 함께할 수도 있습니다. 독립한 자녀들의 빈자리를 채우는 등, 심적 수입도 얻을 수 있습니다.",
-        "그리고 Guest 역시 평소의 여행보다 더 깊은 문화를 체험할 수 있으며 그로 인한 색다른 여행 경험이 될 수 있습니다."
+        "KG ITBANK의 '반응형 JAVA 웹 개발자' 과정 중 개발한 5인의 웹 프로젝트.",
+        "JAVA 및 JSP, Spring Framework, AWS를 이용하여 백 엔드를, HTML와 CSS, Javascript, Jquery를 이용하여 프론트 엔드를 구성했다.",
+        "Ajax를 이용한 비동기적 통신과 반응형이 구현되어 있으며, 페이지 중 헤더와 게시글 페이지, 회원정보 등의 페이지와 반응형 프론트 엔드 구현을 담당했다."
       ],
       gitLink: "https://github.com/seeoya/2020-Project-P5",
-      siteLink: "asdd"
+      siteLink: "./p5.html"
     },
     {
       id: 2,
-      img: ["./img/cinque.jpg", "./img/hungarian.jpg", "./img/lobby.jpg"],
-      title: "전시회",
-      date: "2020. 02. 24 ~ 2020. 03. 20",
+      img: ["./img/abst-main.png"],
+      title: "ABSTRACT",
+      date: "2020. 07. 15 ~ 2020. 07. 20",
       set: ["1인, 기획·퍼블리싱·프론트 엔드 담당", "HTML, CSS, Javascript, Jquery"],
       desc: [
-        "Home sharing 서비스에서 Host는 부수입을 창출할 수 있으며, 새로운 사람들을 만나고, 그들이 문화를 경험하는 순간을 함께할 수도 있습니다. 독립한 자녀들의 빈자리를 채우는 등, 심적 수입도 얻을 수 있습니다.",
-        "그리고 Guest 역시 평소의 여행보다 더 깊은 문화를 체험할 수 있으며 그로 인한 색다른 여행 경험이 될 수 있습니다.",
-        "P5는 Home sharing을 중개하는 역할의 서비스 웹으로 누구나 Host, Guest가 될 수 있습니다."
+        "퍼블리싱과 Javascript 테스트를 위해 개발한 원 페이지로 구성된 웹 페이지.",
+        "상단 슬라이드는 라이브러리가 아닌 JS, JQuery만을 사용해 제작하였으며, 헤더를 포함한 전체 페이지가 3단 반응형 구조로 구성되어 있다.",
+        "카카오 지도 API를 이용해 지도를 구현하였고, 창 사이즈와 지도 크기가 변경되더라도 설정된 부분이 중앙으로 유지되도록 설정했다."
       ],
       gitLink: "https://github.com/seeoya/2020-practice",
       siteLink: "https://seeoya.github.io/2020-practice"
     },
     {
       id: 3,
-      img: ["./img/lobby.jpg", "./img/cinque.jpg", "./img/hungarian.jpg"],
-      title: "포트폴리오",
+      img: ["./img/lobby.jpg"],
+      title: "2020 Seeoya Portfolio",
       date: "2020. 02. 24 ~ 2020. 03. 20",
       set: ["1인, 개발 기획·퍼블리싱·프론트 엔드 담당", "HTML, CSS, Javascript, Jquery, React"],
-      desc: [
-        "Home sharing 서비스에서 Host는 부수입을 창출할 수 있으며, 새로운 사람들을 만나고, 그들이 문화를 경험하는 순간을 함께할 수도 있습니다. 독립한 자녀들의 빈자리를 채우는 등, 심적 수입도 얻을 수 있습니다.",
-        "그리고 Guest 역시 평소의 여행보다 더 깊은 문화를 체험할 수 있으며 그로 인한 색다른 여행 경험이 될 수 있습니다.",
-        "P5는 Home sharing을 중개하는 역할의 서비스 웹으로 누구나 Host, Guest가 될 수 있습니다."
-      ],
+      desc: ["본 2020 포트폴리오 웹 페이지.", "React를 이용하여 구성되었다."],
       gitLink: "https://github.com/seeoya/2020-portfolio",
       siteLink: "http://seeoya.dothome.co.kr/"
     }
@@ -73,7 +69,9 @@ function Portfolio({ selectPage }) {
 function PortfolioSection({ key, img, title, date, set, desc, gitLink, siteLink }) {
   return (
     <div className="portfolio__section" key={key}>
-      <Slider {...settings}> {setImg(img, title)}</Slider>
+      {/* <Slider {...settings}> */}
+      {setImg(img, title, siteLink)}
+      {/* </Slider> */}
       <div className="portfolio__sectionTitle">{title}</div>
       <div className="portfolio__sectionDate">{date}</div>
       <div className="portfolio__sectionSet">{setSet(set)}</div>
@@ -86,12 +84,14 @@ function PortfolioSection({ key, img, title, date, set, desc, gitLink, siteLink 
   );
 }
 
-function setImg(img, title) {
+function setImg(img, title, siteLink) {
   var re = [];
   for (let index = 0; index < img.length; index++) {
     re.push(
       <div>
-        <img src={img[index]} alt={title} className="portfolio__sectionSumbnail" />
+        <a href={siteLink} target="_blank">
+          <img src={img[index]} alt={title} className="portfolio__sectionSumbnail" />
+        </a>
       </div>
     );
   }
