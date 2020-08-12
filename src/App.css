@@ -2,6 +2,12 @@
   font-family: "Nanum Gothic", sans-serif;
 }
 
+#wrap {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
 .header {
   display: contents;
   text-align: center;
@@ -48,6 +54,10 @@
   margin: 40px auto 100px auto;
   font-size: 0.9rem;
   max-width: 1200px;
+}
+
+.page--portfolio {
+  margin: 40px auto 100px auto;
 }
 
 .subTitle {
@@ -106,7 +116,8 @@
 .profile h3 {
   font-size: 1.1rem;
   font-weight: 500;
-  width: 30%;
+  width: 50%;
+  min-width: fit-content;
   border-radius: 5px;
   padding: 3px 0;
   background-color: lightcoral;
@@ -151,7 +162,9 @@
 .profile__educations table,
 .profile__certifications table {
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
+  font-size: 0.9rem;
+  word-break: keep-all;
 }
 
 .profile__educations tr td,
@@ -164,11 +177,6 @@
 .profile__certifications tr:hover {
   background-color: rgba(240, 128, 128, 0.1);
 }
-
-/* .profile__educations tr:nth-child(2n) td:nth-child(2n),
-.profile__certifications tr:nth-child(2n) td:nth-child(2n) {
-  background-color: rgba(240, 240, 240, 0.7);
-} */
 
 .profile__educations tr:first-child td,
 .profile__certifications tr:first-child td {
@@ -206,10 +214,10 @@
 
 .portfolio__section {
   display: inline-block;
-  width: 25%;
+  width: 30%;
   min-width: 250px;
   height: fit-content;
-  margin: 1%;
+  margin: 20px 1%;
   padding: 30px;
   border: 1px outset #eee;
   border-radius: 20px;
@@ -244,7 +252,7 @@
 
 .portfolio__sectionSet {
   font-size: 0.8rem;
-  line-height: 0.5rem;
+  line-height: 1rem;
   margin: 20px 0 20px;
 }
 
@@ -271,4 +279,34 @@
 .footer {
   font-size: 0.8rem;
   text-align: center;
+}
+
+@media screen and (max-width: 370px) {
+  #root {
+    width: 100%;
+  }
+
+  #wrap {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: khaki;
+  }
+
+  .page--portfolio {
+    margin: 40px 0 100px 0;
+  }
+
+  .nav__button {
+    padding: 3px 5px;
+  }
+
+  .portfolio__section {
+    margin: 15px 1px;
+    padding: 20px;
+  }
+
+  .profile__skills--content {
+    display: contents;
+  }
 }

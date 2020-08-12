@@ -46,7 +46,7 @@ function Portfolio({ selectPage }) {
     {
       id: 3,
       img: ["./img/lobby.jpg"],
-      title: "2020 Seeoya Portfolio",
+      title: "2020 Portfolio",
       date: "2020. 02. 24 ~ 2020. 03. 20",
       set: ["1인, 개발 기획·퍼블리싱·프론트 엔드 담당", "HTML, CSS, Javascript, Jquery, React"],
       desc: ["본 2020 포트폴리오 웹 페이지.", "React를 이용하여 구성되었다."],

@@ -159,7 +159,7 @@ function Profile({ selectPage }) {
       date: "2019. 07 ~ 2021. 02",
       name: "학점은행제",
       depart: "컴퓨터공학",
-      state: "졸업예정"
+      state: "졸업 예정"
     }
   ];
 
@@ -169,28 +169,28 @@ function Profile({ selectPage }) {
       date: "2007. 04",
       name: "정보기술자격(ITQ) 아래한글",
       organization: "한국생산성본부(KPC)",
-      state: "최종합격"
+      state: "최종 합격"
     },
     {
       id: 2,
       date: "2008. 12",
       name: "워드프로세서 1급",
       organization: "대한상공회의소",
-      state: "최종합격"
+      state: "최종 합격"
     },
     {
       id: 3,
       date: "2018. 06",
       name: "컬러리스트 산업기사",
       organization: "한국산업인력공단",
-      state: "최종합격"
+      state: "최종 합격"
     },
     {
       id: 4,
       date: "2020. 06",
       name: "정보처리기사",
       organization: "한국산업인력공단",
-      state: "필기합격"
+      state: "필기 합격"
     }
   ];
 
@@ -292,7 +292,7 @@ function BatterySetting({ level }) {
   let battery = "./img/battery" + level + ".svg";
   let alt = "level" + level;
   let title = ["학습 예정", "학습 경험 O", "사용 경험 O", "응용 경험 O", "기술 사용 가능"];
-  let re = <img src={battery} alt={alt} title={title[level]}></img>;
+  let re = <img src={battery} alt={alt} title={title[level]} className="levelImg"></img>;
   return re;
 }
 

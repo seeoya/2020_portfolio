@@ -46,19 +46,35 @@ class App extends Component {
   pageSwitch = (num) => {
     switch (num) {
       case 1:
-        return <Profile />;
+        return (
+          <div className="page">
+            <Profile />
+          </div>
+        );
       case 2:
-        return <Portfolio />;
+        return (
+          <div className="page page--portfolio">
+            <Portfolio />
+          </div>
+        );
       case 3:
-        return <Contact />;
+        return (
+          <div className="page">
+            <Contact />
+          </div>
+        );
       default:
-        return <Main />;
+        return (
+          <div className="page">
+            <Main />
+          </div>
+        );
     }
   };
 
   render() {
     return (
-      <>
+      <div id="wrap">
         <header className="header">
           <div className="header__logo" onClick={() => this.changePage(0)}>
             Seeoya
@@ -74,13 +90,13 @@ class App extends Component {
           </nav>
         </header>
         <section>
-          <article className="page">{this.pageSwitch(this.state.selectPage)}</article>
+          <article>{this.pageSwitch(this.state.selectPage)}</article>
         </section>
         <footer className="footer">
           <address></address>
           <p>ⓒSEEOYA 2020, ALL RIGHTS RESERVED</p>
         </footer>
-      </>
+      </div>
     );
   }
 }
