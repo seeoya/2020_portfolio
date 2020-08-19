@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import $ from "jquery";
-import Slider from "react-slick";
 
 const settings = {
   className: "portfolio__slider",
@@ -45,11 +43,15 @@ function Portfolio({ selectPage }) {
     },
     {
       id: 3,
-      img: ["./img/lobby.jpg"],
+      img: ["./img/2020-portfolio-main.png"],
       title: "2020 Portfolio",
       date: "2020. 02. 24 ~ 2020. 03. 20",
-      set: ["1인, 개발 기획·퍼블리싱·프론트 엔드 담당", "HTML, CSS, Javascript, Jquery, React"],
-      desc: ["본 2020 포트폴리오 웹 페이지.", "React를 이용하여 구성되었다."],
+      set: ["1인, 개발 기획·퍼블리싱·프론트 엔드 담당", "HTML, CSS, Javascript, React"],
+      desc: [
+        "본 2020 포트폴리오 웹 페이지이다.",
+        "React를 이용하여 원 페이지로 구성된 웹 페이지이며, 별도의 DB 연결은 하지 않았다. 슬라이드 구성을 위한 slick 라이브러리와 구글 폰트를 이용했다.",
+        "HTML, CSS, JAVASCRIPT, REACT만을 이용한 프론트엔드 개발 페이지."
+      ],
       gitLink: "https://github.com/seeoya/2020-portfolio",
       siteLink: "http://seeoya.dothome.co.kr/"
     }
@@ -69,9 +71,7 @@ function Portfolio({ selectPage }) {
 function PortfolioSection({ key, img, title, date, set, desc, gitLink, siteLink }) {
   return (
     <div className="portfolio__section" key={key}>
-      {/* <Slider {...settings}> */}
       {setImg(img, title, siteLink)}
-      {/* </Slider> */}
       <div className="portfolio__sectionTitle">{title}</div>
       <div className="portfolio__sectionDate">{date}</div>
       <div className="portfolio__sectionSet">{setSet(set)}</div>

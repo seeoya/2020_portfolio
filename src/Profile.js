@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import $ from "jquery";
 
 function Profile({ selectPage }) {
   const skillList = [
@@ -29,7 +28,7 @@ function Profile({ selectPage }) {
       id: 4,
       theme: 1,
       name: "JQUERY",
-      icon: "./img/jquery.png",
+      icon: "./img/jquery.svg",
       level: 3
     },
     {
@@ -199,91 +198,84 @@ function Profile({ selectPage }) {
       <div className="profile__name">
         김 수 영<div class="profile__name--eng">Hailey KIM</div>
       </div>
-      <div className="profile__skills">
-        <h3>SKILL</h3>
-        <div className="profile__skills--content">
-          <div className="profile__skills--content1">
-            {skillList
-              .filter((it) => it.theme === 1)
-              .map((i) => (
-                <div class="profile__skills--icon">
-                  <img src={i.icon} alt={i.name}></img>
-                  <p>
-                    {i.name}
-                    <BatterySetting level={i.level} />
-                  </p>
-                </div>
-              ))}
-          </div>
-          <div className="profile__skills--content2">
-            {skillList
-              .filter((it) => it.theme === 2)
-              .map((i) => (
-                <div class="profile__skills--icon">
-                  <img src={i.icon} alt={i.name}></img>
-                  <p>
-                    {i.name}
-                    <BatterySetting level={i.level} />
-                  </p>
-                </div>
-              ))}
-          </div>
-          <div className="profile__skills--content3">
-            {skillList
-              .filter((it) => it.theme === 3)
-              .map((i) => (
-                <div class="profile__skills--icon">
-                  <img src={i.icon} alt={i.name}></img>
-                  <p>
-                    {i.name}
-                    <BatterySetting level={i.level} />
-                  </p>
-                </div>
-              ))}
-          </div>
-          <div className="profile__skills--content4">
-            {skillList
-              .filter((it) => it.theme === 4)
-              .map((i) => (
-                <div class="profile__skills--icon">
-                  <img src={i.icon} alt={i.name}></img>
-                  <p>
-                    {i.name}
-                    <BatterySetting level={i.level} />
-                  </p>
-                </div>
-              ))}
-          </div>
-        </div>
-      </div>
+      <Skills skillList={skillList} />
+      <Educations educationList={educationList} />
+      <Certifications certificationList={certificationList} />
+    </div>
+  );
+}
 
-      <div className="profile__educations">
-        <h3>EDUCATION</h3>
-        <table>
-          {educationList.reverse().map((i) => (
-            <tr>
-              <td>{i.date}</td>
-              <td>{i.name}</td>
-              <td>{i.depart}</td>
-              <td>{i.state}</td>
-            </tr>
-          ))}
-        </table>
-      </div>
+function Certifications({ certificationList }) {
+  return (
+    <div className="profile__certifications">
+      <h3>CERTIFICATION</h3>
+      <table>
+        {certificationList.reverse().map((i) => (
+          <tr>
+            <td>{i.date}</td>
+            <td>{i.name}</td>
+            <td>{i.organization}</td>
+            <td>{i.state}</td>
+          </tr>
+        ))}
+      </table>
+    </div>
+  );
+}
 
-      <div className="profile__certifications">
-        <h3>CERTIFICATION</h3>
-        <table>
-          {certificationList.reverse().map((i) => (
-            <tr>
-              <td>{i.date}</td>
-              <td>{i.name}</td>
-              <td>{i.organization}</td>
-              <td>{i.state}</td>
-            </tr>
-          ))}
-        </table>
+function Educations({ educationList }) {
+  return (
+    <div className="profile__educations">
+      <h3>EDUCATION</h3>
+      <table>
+        {educationList.reverse().map((i) => (
+          <tr>
+            <td>{i.date}</td>
+            <td>{i.name}</td>
+            <td>{i.depart}</td>
+            <td>{i.state}</td>
+          </tr>
+        ))}
+      </table>
+    </div>
+  );
+}
+
+function Skills({ skillList }) {
+  return (
+    <div className="profile__skills">
+      <h3>SKILL</h3>
+      <div className="profile__skills--content">
+        <SkillsTab skillList={skillList} />
       </div>
+    </div>
+  );
+}
+
+function SkillsTab({ skillList }) {
+  const re = [];
+  for (let index = 1; index < 5; index++) {
+    re.push(
+      <div className="profile__skills--innerContent">
+        {skillList
+          .filter((it) => it.theme === index)
+          .map((i) => (
+            <SkillIconMap i={i} />
+          ))}
+      </div>
+    );
+  }
+  return re;
+}
+
+function SkillIconMap({ i }) {
+  return (
+    <div class="profile__skills--icon">
+      <object type="image/svg+xml" data={i.icon} alt={i.name}></object>
+      <p>
+        {i.name}
+        <BatterySetting level={i.level} />
+      </p>
     </div>
   );
 }
@@ -292,7 +284,8 @@ function BatterySetting({ level }) {
   let battery = "./img/battery" + level + ".svg";
   let alt = "level" + level;
   let title = ["학습 예정", "학습 경험 O", "사용 경험 O", "응용 경험 O", "기술 사용 가능"];
-  let re = <img src={battery} alt={alt} title={title[level]} className="levelImg"></img>;
+  let re = <object type="image/svg+xml" data={battery} alt={alt} title={title[level]} className="levelImg"></object>;
+
   return re;
 }
 

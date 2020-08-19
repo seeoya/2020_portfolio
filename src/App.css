@@ -131,10 +131,8 @@
   width: 100%;
   max-width: 900px;
 }
-.profile__skills--content1,
-.profile__skills--content2,
-.profile__skills--content3,
-.profile__skills--content4 {
+
+.profile__skills--innerContent {
   width: 100%;
 }
 
@@ -149,7 +147,7 @@
   margin: 5px 0;
   font-size: 0.9rem;
 }
-.profile__skills--icon img {
+.profile__skills--icon object[type="image/svg+xml"] {
   width: 20px;
   height: 20px;
   margin: 0;
@@ -273,6 +271,34 @@
 
 .fa-2x:hover {
   color: lightcoral;
+}
+
+/* contact */
+.contact__name {
+  font-family: "Special Elite", cursive;
+  font-size: 2rem;
+  margin: 150px auto;
+  line-height: 3rem;
+}
+
+.contact__anchor {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding: 1px;
+  margin: 20px;
+}
+
+.contact__anchor span {
+  display: inline-block;
+}
+
+.contact__icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  position: relative;
+  z-index: -1;
 }
 
 /* footer */

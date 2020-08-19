@@ -129,9 +129,37 @@ table {
 .header {
   position: fixed;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   margin: 0 auto;
   text-align: center;
   background-color: white;
   box-shadow: 0px 1px 1px #bbb;
+  top: 0;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+
+.header__buttons {
+  margin: 10px auto;
+}
+
+.header__buttons button {
+  border: none;
+  background: #eee;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+.header__buttons button:hover {
+  background: #e21351;
+  color: white;
+}
+
+.article {
+  margin-top: 120px;
+  width: 100%;
+}
+
+.article img {
+  width: 100%;
 }
