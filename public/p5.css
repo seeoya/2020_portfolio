@@ -163,3 +163,12 @@ table {
 .article img {
   width: 100%;
 }
+
+.sec1 {
+  display: block;
+}
+
+.sec2,
+.sec3 {
+  display: none;
+}
